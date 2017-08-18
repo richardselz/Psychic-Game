@@ -64,9 +64,9 @@ function weLost(){
 		return true;
 	}
 }
-for(var i = 0; i < lives; i++){
+
 document.onkeyup = function(event) {
-		globalKeyStroke = event.key;
+		globalKeyStroke = event.key.toLowerCase();
 		globalKeyCodeStroke = event.keyCode;
 		if(event.keyCode === 32){
 		  yourGuesses.length = 0;
@@ -86,4 +86,3 @@ document.onkeyup = function(event) {
 			}
 		}
 	};
-}
