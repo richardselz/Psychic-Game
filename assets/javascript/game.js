@@ -13,6 +13,11 @@ function getLetter() {
 	return theChosenLetter;
 }
 
+function guessesLeftFunc(x){
+	guessesLeft = x;
+	document.getElementById("guesses-left").innerHTML = guessesLeft;
+}
+
 function guessesFun() {
 	guessesLeft--;
 	document.getElementById("guesses-left").innerHTML = guessesLeft;
@@ -66,9 +71,10 @@ document.onkeyup = function(event) {
 		if(event.keyCode === 32){
 		  yourGuesses.length = 0;
 		  lives = 666;
-		  guesses = 10;
+		  // guesses = 10;
+		  newLost = 0;
 		  getLetter();
-		  guessesLeft = 10
+		  guessesLeftFunc(10);
 		  addLetterToArray();
 		}else{
 			//check if letter input is in word or in array
